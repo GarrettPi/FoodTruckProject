@@ -51,7 +51,8 @@ public class FoodTruckApp {
 			case 3:
 			case 4:
 				return;
-			default: System.out.println("Invalid Selection.  Please Try Again.");
+			default:
+				System.out.println("Invalid Selection.  Please Try Again.");
 			}
 		}
 
@@ -59,7 +60,7 @@ public class FoodTruckApp {
 
 	public FoodTruck addFoodTruck(String name, String foodType, int rating) {
 		FoodTruck foodTruck = new FoodTruck(name, foodType, rating);
-		System.out.println(foodTruck);
+		System.out.println("\nFood Truck Added:\n" + foodTruck + "\n");
 		return foodTruck;
 	}
 
@@ -76,7 +77,7 @@ public class FoodTruckApp {
 
 	public void listFoodTrucks(FoodTruck[] foodTrucks) {
 		for (FoodTruck foodTruck : foodTrucks) {
-			if(foodTruck != null) {
+			if (foodTruck != null) {
 				System.out.println(foodTruck);
 			}
 		}
