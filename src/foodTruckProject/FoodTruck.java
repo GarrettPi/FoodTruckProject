@@ -1,4 +1,4 @@
-package foodTrucks;
+package foodTruckProject;
 
 public class FoodTruck {
 
@@ -8,16 +8,31 @@ public class FoodTruck {
 	private String foodType;
 	private int rating;
 	
-	public FoodTruck(int uniqueID, String name, String foodType, int rating) {
-		super();
-		this.uniqueID = uniqueID;
+	public FoodTruck(String name, String foodType, int rating) {
+		this.uniqueID = truckNumber;
 		this.name = name;
 		this.foodType = foodType;
 		this.rating = rating;
+		truckNumber++;
 	}
 
 	public int getUniqueID() {
 		return uniqueID;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("FoodTruck [uniqueID=");
+		builder.append(uniqueID);
+		builder.append(", name=");
+		builder.append(name);
+		builder.append(", foodType=");
+		builder.append(foodType);
+		builder.append(", rating=");
+		builder.append(rating);
+		builder.append("]");
+		return builder.toString();
 	}
 
 	public void setUniqueID(int uniqueID) {
