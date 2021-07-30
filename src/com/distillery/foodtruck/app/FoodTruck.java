@@ -1,4 +1,4 @@
-package foodTruckProject;
+package com.distillery.foodtruck.app;
 
 public class FoodTruck {
 
