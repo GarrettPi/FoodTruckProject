@@ -30,16 +30,14 @@ public class FoodTruckApp {
 				break;
 			}
 
-			System.out.printf("What type of food does %s sell?", name);
+			System.out.printf("What type of food does %s sell?\n", name);
 			foodType = scanner.nextLine();
-			System.out.printf("\nHow good is the %s from %s, on a scale of 1-10?", foodType, name);
+			System.out.printf("How good is the %s from %s, on a scale of 1-10?\n", foodType, name);
 			rating = scanner.nextInt();
 			scanner.nextLine();
 			foodTrucks[FoodTruck.getTruckNumber() - 1] = fta.addFoodTruck(name, foodType, rating);
 			trucksEntered++;
-			for (FoodTruck foodTruck : foodTrucks) {
-				System.out.println(foodTruck);
-			}
+
 		}
 
 		while (trucksEntered > 0) {
@@ -52,7 +50,8 @@ public class FoodTruckApp {
 			case 2:
 			case 3:
 			case 4:
-			default:
+				return;
+			default: System.out.println("Invalid Selection.  Please Try Again.");
 			}
 		}
 
@@ -77,7 +76,9 @@ public class FoodTruckApp {
 
 	public void listFoodTrucks(FoodTruck[] foodTrucks) {
 		for (FoodTruck foodTruck : foodTrucks) {
-			System.out.println(foodTruck);
+			if(foodTruck != null) {
+				System.out.println(foodTruck);
+			}
 		}
 	}
 }
