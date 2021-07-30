@@ -35,16 +35,25 @@ public class FoodTruckApp {
 			System.out.printf("\nHow good is the %s from %s, on a scale of 1-10?", foodType, name);
 			rating = scanner.nextInt();
 			scanner.nextLine();
-			foodTrucks[FoodTruck.getTruckNumber()-1] = fta.addFoodTruck(name, foodType, rating);
+			foodTrucks[FoodTruck.getTruckNumber() - 1] = fta.addFoodTruck(name, foodType, rating);
 			trucksEntered++;
 			for (FoodTruck foodTruck : foodTrucks) {
 				System.out.println(foodTruck);
 			}
 		}
-		
-		while(trucksEntered > 0) {
+
+		while (trucksEntered > 0) {
 			fta.displayMenu();
 			int menuChoice = scanner.nextInt();
+			switch (menuChoice) {
+			case 1:
+				fta.listFoodTrucks(foodTrucks);
+				break;
+			case 2:
+			case 3:
+			case 4:
+			default:
+			}
 		}
 
 	}
@@ -56,12 +65,19 @@ public class FoodTruckApp {
 	}
 
 	public void displayMenu() {
-		System.out.println("Main Menu\nPlease Make a Selection:");
+		System.out.println(
+				"Main Menu\nPlease Make a Selection:\n1) View all Food Trucks\n2) See Average Food Truck Ratings\n3) See the Highest-Rated Food Truck\n4) Quit the Program");
 
 //	    List all existing food trucks.
 //	    See the average rating of food trucks.
 //	    Display the highest-rated food truck.
 //	    Quit the program.
 
+	}
+
+	public void listFoodTrucks(FoodTruck[] foodTrucks) {
+		for (FoodTruck foodTruck : foodTrucks) {
+			System.out.println(foodTruck);
+		}
 	}
 }
