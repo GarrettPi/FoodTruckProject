@@ -25,9 +25,9 @@ public class FoodTruckApp {
 			if (name.equals("quit") && trucksEntered == 0) {
 				System.out
 						.println("No trucks entered and you have chosen to quit.\nThank you for using Food Trucks App");
-				return;
+				break;
 			} else if (name.equals("quit") && trucksEntered > 0) {
-				return;
+				break;
 			}
 
 			System.out.printf("What type of food does %s sell?", name);
@@ -43,7 +43,8 @@ public class FoodTruckApp {
 		}
 		
 		while(trucksEntered > 0) {
-			
+			fta.displayMenu();
+			int menuChoice = scanner.nextInt();
 		}
 
 	}
