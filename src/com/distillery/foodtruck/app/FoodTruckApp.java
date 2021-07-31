@@ -56,6 +56,7 @@ public class FoodTruckApp {
 				fta.findHighestRating(foodTrucks);
 				break;
 			case 4:
+				System.out.println("\nThank you for using The Food Truck Database!\n");
 				return;
 			default:
 				System.out.println("Invalid Selection.  Please Try Again.");
