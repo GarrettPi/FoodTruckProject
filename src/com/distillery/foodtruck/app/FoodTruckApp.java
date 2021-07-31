@@ -102,16 +102,18 @@ public class FoodTruckApp {
 
 	public void findHighestRating(FoodTruck[] foodTrucks) {
 		int highest = foodTrucks[0].getRating();
+		int highestId = foodTrucks[0].getUniqueID();
 		String highestName = foodTrucks[0].getName();
-		for (FoodTruck foodTruck : foodTrucks) {
-			if (foodTruck != null && foodTruck.getRating() > highest) {
-				highest = foodTruck.getRating();
-//				System.out.println(foodTruck.getName());
-				highestName = foodTruck.getName();
+		String highestFood = foodTrucks[0].getFoodType();		
+		for(int i = 0; i < foodTrucks.length; i++) {
+			if (foodTrucks[i] != null && foodTrucks[i].getRating() > highest) {
+				highest = foodTrucks[i].getRating();
+				highestName = foodTrucks[i].getName();
+				highestFood = foodTrucks[i].getFoodType();
+				highestId = foodTrucks[i].getUniqueID();
 			}
 		}
-		System.out.printf("\nThe highest rated food truck in our database is %s with a rating of %d out of 10.\n",
-				highestName, highest);
+		System.out.printf("\nThe highest rated food truck in our database is truck No.%d,\n%s, which sells delicious %s.  It was rated %d points out of 10!\n", highestId, highestName, highestFood, highest);
 
 	}
 
