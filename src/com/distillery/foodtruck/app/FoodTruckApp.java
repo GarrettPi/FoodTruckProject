@@ -51,6 +51,8 @@ public class FoodTruckApp {
 				fta.calculateFoodTruckAverage(foodTrucks);
 				break;
 			case 3:
+				fta.findHighestRating(foodTrucks);
+				break;
 			case 4:
 				return;
 			default:
@@ -94,6 +96,19 @@ public class FoodTruckApp {
 		average /= truckCount;
 		System.out.printf("\nThe average of all food trucks in our database is %.2f out of 10.", average);
 
+	}
+	
+	public void findHighestRating(FoodTruck[] foodTrucks) {
+		int highest = foodTrucks[0].getRating();
+		String highestName = "";
+		for (FoodTruck foodTruck : foodTrucks) {
+			if(foodTruck.getRating() > highest) {
+				highest = foodTruck.getRating();
+				highestName = foodTruck.getName();	
+			}
+		}
+		System.out.printf("\nThe highest rated food truck in our database is %s with a rating of %d", highestName, highest);
+		
 	}
 
 }
