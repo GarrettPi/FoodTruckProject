@@ -23,13 +23,13 @@ public class FoodTruck {
 
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("FoodTruck [uniqueID=");
+		builder.append("FoodTruck [ID: ");
 		builder.append(uniqueID);
-		builder.append(", name=");
+		builder.append(", name: ");
 		builder.append(name);
-		builder.append(", foodType=");
+		builder.append(", foodType: ");
 		builder.append(foodType);
-		builder.append(", rating=");
+		builder.append(", rating: ");
 		builder.append(rating);
 		builder.append("]");
 		return builder.toString();

@@ -12,14 +12,14 @@ public class FoodTruckApp {
 
 		FoodTruck[] foodTrucks = new FoodTruck[5];
 		int trucksEntered = 0;
-
+		System.out.println("-----Welcome to the Food Truck Database!-----\nThe easiest way to store and rate your favorite mobile hot spots!\n\n");
 		// main program loop
 		while (trucksEntered < 5) {
 			String name;
 			String foodType;
 			int rating;
 			String response;
-			System.out.println("Please enter the name of the Food Truck:\n(enter \"quit\" to proceed to the menu)");
+			System.out.println("Please enter the name of the Food Truck you'd like to store:\n(enter \"quit\" to proceed to the menu)");
 			name = scanner.nextLine();
 
 			if (name.equals("quit") && trucksEntered == 0) {
@@ -89,12 +89,12 @@ public class FoodTruckApp {
 			if (foodTruck != null) {
 				average += foodTruck.getRating();
 				truckCount++;
-				System.out.println("Adding "+foodTruck.getRating()+" to the average");
-				System.out.println(average);
+//				System.out.println("Adding "+foodTruck.getRating()+" to the average");
+//				System.out.println(average);
 			}
 		}
 		average /= truckCount;
-		System.out.printf("\nThe average of all food trucks in our database is %.2f out of 10.", average);
+		System.out.printf("\nThe average of all food trucks in our database is %.2f out of 10.\n", average);
 
 	}
 	
@@ -104,11 +104,11 @@ public class FoodTruckApp {
 		for (FoodTruck foodTruck : foodTrucks) {
 			if(foodTruck.getRating() > highest) {
 				highest = foodTruck.getRating();
-				System.out.println(foodTruck.getName());
+//				System.out.println(foodTruck.getName());
 				highestName = foodTruck.getName();
 			}
 		}
-		System.out.printf("\nThe highest rated food truck in our database is %s with a rating of %d", highestName, highest);
+		System.out.printf("\nThe highest rated food truck in our database is %s with a rating of %d out of 10.\n", highestName, highest);
 		
 	}
 
