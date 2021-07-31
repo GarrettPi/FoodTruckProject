@@ -24,6 +24,7 @@ Please Make a Selection:
 3) See the Highest-Rated Food Truck        
 4) Quit the Program        
 
+**Operation**     
 
 The user can select any of the four options and will receive the following outputs:           
 **1)** - A list of all food trucks in the database and all the relevant information(**Name, Food Sold, Rating,** and **unique ID number**)       
