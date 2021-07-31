@@ -100,11 +100,12 @@ public class FoodTruckApp {
 	
 	public void findHighestRating(FoodTruck[] foodTrucks) {
 		int highest = foodTrucks[0].getRating();
-		String highestName = "";
+		String highestName = foodTrucks[0].getName();
 		for (FoodTruck foodTruck : foodTrucks) {
 			if(foodTruck.getRating() > highest) {
 				highest = foodTruck.getRating();
-				highestName = foodTruck.getName();	
+				System.out.println(foodTruck.getName());
+				highestName = foodTruck.getName();
 			}
 		}
 		System.out.printf("\nThe highest rated food truck in our database is %s with a rating of %d", highestName, highest);

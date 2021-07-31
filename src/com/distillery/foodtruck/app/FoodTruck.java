@@ -20,7 +20,7 @@ public class FoodTruck {
 		return uniqueID;
 	}
 
-	@Override
+
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("FoodTruck [uniqueID=");
