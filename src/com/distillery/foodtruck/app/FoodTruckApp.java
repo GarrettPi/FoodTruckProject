@@ -48,6 +48,7 @@ public class FoodTruckApp {
 				fta.listFoodTrucks(foodTrucks);
 				break;
 			case 2:
+				fta.calculateFoodTruckAverage(foodTrucks);
 			case 3:
 			case 4:
 				return;
@@ -68,11 +69,6 @@ public class FoodTruckApp {
 		System.out.println(
 				"Main Menu\nPlease Make a Selection:\n1) View all Food Trucks\n2) See Average Food Truck Ratings\n3) See the Highest-Rated Food Truck\n4) Quit the Program");
 
-//	    List all existing food trucks.
-//	    See the average rating of food trucks.
-//	    Display the highest-rated food truck.
-//	    Quit the program.
-
 	}
 
 	public void listFoodTrucks(FoodTruck[] foodTrucks) {
@@ -82,4 +78,18 @@ public class FoodTruckApp {
 			}
 		}
 	}
+
+	public void calculateFoodTruckAverage(FoodTruck[] foodTrucks) {
+		double average = 0.0;
+		for (FoodTruck foodTruck : foodTrucks) {
+			if (foodTruck != null) {
+				average += foodTruck.getRating();
+//				System.out.println(average);
+			}
+		}
+		average /= foodTrucks.length;
+		System.out.printf("\nThe average of all food trucks in our database is %.2f", average);
+
+	}
+
 }
