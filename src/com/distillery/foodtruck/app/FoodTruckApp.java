@@ -104,16 +104,20 @@ public class FoodTruckApp {
 		int highest = foodTrucks[0].getRating();
 		int highestId = foodTrucks[0].getUniqueID();
 		String highestName = foodTrucks[0].getName();
-		String highestFood = foodTrucks[0].getFoodType();		
+		String highestFood = foodTrucks[0].getFoodType();
+		FoodTruck bestFoodTruck = null;
 		for(int i = 0; i < foodTrucks.length; i++) {
 			if (foodTrucks[i] != null && foodTrucks[i].getRating() > highest) {
 				highest = foodTrucks[i].getRating();
 				highestName = foodTrucks[i].getName();
 				highestFood = foodTrucks[i].getFoodType();
 				highestId = foodTrucks[i].getUniqueID();
+				bestFoodTruck = foodTrucks[i];
 			}
 		}
 		System.out.printf("\nThe highest rated food truck in our database is truck No.%d,\n%s, which sells delicious %s.  It was rated %d points out of 10!\n", highestId, highestName, highestFood, highest);
+		System.out.println(bestFoodTruck);
+		
 
 	}
 
