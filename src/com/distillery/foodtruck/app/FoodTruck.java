@@ -1,19 +1,19 @@
 package com.distillery.foodtruck.app;
 
 public class FoodTruck {
-
+	// declaring/intializing private fields
 	private static int truckNumber = 1;
 	private int uniqueID;
 	private String name;
 	private String foodType;
 	private int rating;
-
+	// ctor
 	public FoodTruck(String name, String foodType, int rating) {
 		this.uniqueID = truckNumber;
 		this.name = name;
 		this.foodType = foodType;
 		this.rating = rating;
-		truckNumber++;
+		truckNumber++; //incrementing static field for Id assignment
 	}
 
 	public int getUniqueID() {
@@ -61,5 +61,5 @@ public class FoodTruck {
 	public void setRating(int rating) {
 		this.rating = rating;
 	}
-
+	// almost left in static methods for the truckNumber get and set YIKES!
 }
