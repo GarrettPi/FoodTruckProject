@@ -12,14 +12,16 @@ public class FoodTruckApp {
 
 		FoodTruck[] foodTrucks = new FoodTruck[5];
 		int trucksEntered = 0;
-		System.out.println("-----Welcome to the Food Truck Database!-----\nThe easiest way to store and rate your favorite mobile hot spots!\n\n");
+		System.out.println(
+				"-----Welcome to the Food Truck Database!-----\nThe easiest way to store and rate your favorite mobile hot spots!\n\n");
 		// main program loop
 		while (trucksEntered < 5) {
 			String name;
 			String foodType;
 			int rating;
 			String response;
-			System.out.println("Please enter the name of the Food Truck you'd like to store:\n(enter \"quit\" to proceed to the menu)");
+			System.out.println(
+					"Please enter the name of the Food Truck you'd like to store:\n(enter \"quit\" to proceed to the menu)");
 			name = scanner.nextLine();
 
 			if (name.equals("quit") && trucksEntered == 0) {
@@ -35,7 +37,7 @@ public class FoodTruckApp {
 			System.out.printf("How good is the %s from %s, on a scale of 1-10?\n", foodType, name);
 			rating = scanner.nextInt();
 			scanner.nextLine();
-			foodTrucks[FoodTruck.getTruckNumber() - 1] = fta.addFoodTruck(name, foodType, rating);
+			foodTrucks[trucksEntered] = fta.addFoodTruck(name, foodType, rating);
 			trucksEntered++;
 
 		}
@@ -94,22 +96,23 @@ public class FoodTruckApp {
 			}
 		}
 		average /= truckCount;
-		System.out.printf("\nThe average of all food trucks in our database is %.2f out of 10.\n", average);
+		System.out.printf("\nThe average rating of all food trucks in our database is %.2f out of 10.\n", average);
 
 	}
-	
+
 	public void findHighestRating(FoodTruck[] foodTrucks) {
 		int highest = foodTrucks[0].getRating();
 		String highestName = foodTrucks[0].getName();
 		for (FoodTruck foodTruck : foodTrucks) {
-			if(foodTruck.getRating() > highest) {
+			if (foodTruck != null && foodTruck.getRating() > highest) {
 				highest = foodTruck.getRating();
 //				System.out.println(foodTruck.getName());
 				highestName = foodTruck.getName();
 			}
 		}
-		System.out.printf("\nThe highest rated food truck in our database is %s with a rating of %d out of 10.\n", highestName, highest);
-		
+		System.out.printf("\nThe highest rated food truck in our database is %s with a rating of %d out of 10.\n",
+				highestName, highest);
+
 	}
 
 }

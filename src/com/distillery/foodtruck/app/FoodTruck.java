@@ -7,7 +7,7 @@ public class FoodTruck {
 	private String name;
 	private String foodType;
 	private int rating;
-	
+
 	public FoodTruck(String name, String foodType, int rating) {
 		this.uniqueID = truckNumber;
 		this.name = name;
@@ -19,7 +19,6 @@ public class FoodTruck {
 	public int getUniqueID() {
 		return uniqueID;
 	}
-
 
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -62,15 +61,5 @@ public class FoodTruck {
 	public void setRating(int rating) {
 		this.rating = rating;
 	}
-
-	public static int getTruckNumber() {
-		return truckNumber;
-	}
-
-	public static void setTruckNumber(int truckNumber) {
-		FoodTruck.truckNumber = truckNumber;
-	}
-
-	
 
 }
