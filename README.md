@@ -15,7 +15,7 @@ Additionally, the user can enter "quit" as the username to end the data entry an
    
 **Entering "quit" before a food truck has been entered will not advance to the menu and will instead terminate the program*
 
-**The Menu**
+##### **The Menu**
 
       
 Please Make a Selection:        
