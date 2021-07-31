@@ -49,6 +49,7 @@ public class FoodTruckApp {
 				break;
 			case 2:
 				fta.calculateFoodTruckAverage(foodTrucks);
+				break;
 			case 3:
 			case 4:
 				return;
@@ -61,13 +62,13 @@ public class FoodTruckApp {
 
 	public FoodTruck addFoodTruck(String name, String foodType, int rating) {
 		FoodTruck foodTruck = new FoodTruck(name, foodType, rating);
-		System.out.println("\nFood Truck Added:\n" + foodTruck + "\n");
+		System.out.println("\nFood Truck Added: " + foodTruck.getName() + "\n");
 		return foodTruck;
 	}
 
 	public void displayMenu() {
 		System.out.println(
-				"Main Menu\nPlease Make a Selection:\n1) View all Food Trucks\n2) See Average Food Truck Ratings\n3) See the Highest-Rated Food Truck\n4) Quit the Program");
+				"\nMain Menu\nPlease Make a Selection:\n1) View all Food Trucks\n2) See Average Food Truck Ratings\n3) See the Highest-Rated Food Truck\n4) Quit the Program");
 
 	}
 
@@ -81,14 +82,17 @@ public class FoodTruckApp {
 
 	public void calculateFoodTruckAverage(FoodTruck[] foodTrucks) {
 		double average = 0.0;
+		int truckCount = 0;
 		for (FoodTruck foodTruck : foodTrucks) {
 			if (foodTruck != null) {
 				average += foodTruck.getRating();
-//				System.out.println(average);
+				truckCount++;
+				System.out.println("Adding "+foodTruck.getRating()+" to the average");
+				System.out.println(average);
 			}
 		}
-		average /= foodTrucks.length;
-		System.out.printf("\nThe average of all food trucks in our database is %.2f", average);
+		average /= truckCount;
+		System.out.printf("\nThe average of all food trucks in our database is %.2f out of 10.", average);
 
 	}
 
