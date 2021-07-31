@@ -17,7 +17,7 @@ Additionally, the user can enter "quit" as the username to end the data entry an
 
 **The Menu**
 
-Main Menu        
+      
 Please Make a Selection:        
 1) View all Food Trucks        
 2) See Average Food Truck Ratings         
