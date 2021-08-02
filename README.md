@@ -9,11 +9,12 @@ Upon running the program, the user will prompted to enter the following:
 
 **1** - The name of the food truck to be added to the database   
 **2** - The food sold by the food truck   
-**3** - The user's numerical rating of the food truck quality on a scale from 1 to 10.
+**3** - A numerical rating of the food truck quality on a scale from 1 to 10. *    
 
-Additionally, the user can enter "quit" as the username to end the data entry and proceed to the menu*      
-   
-**Entering "quit" before a food truck has been entered will not advance to the menu and will instead terminate the program*
+Additionally, the user can enter "quit" as the username to end the data entry and proceed to the menu *      
+
+*Entering a value less than 1 or greater than 10 will reprompt the user to correct.*        
+*Entering "quit" before a food truck has been entered will not advance to the menu and will instead terminate the program*
 
 ##### **The Menu**
 
@@ -47,5 +48,5 @@ The user can select any of the four options and will receive the following outpu
 
 ### Lessons Learned
 
+Biggest lesson I think I learned with this project is that it ALWAYS pays to give your code that one last review.  For instance, I almost left a pair of auto generated get/set methods for the static truck number field.  Had I done that, I would have pretty royally tanked my chances at full credit.  Thankfully I caught them in time.  It's never too late to double check the plan and make sure your code doesn't deviate.
 
-OOOOF a few for sure

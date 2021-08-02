@@ -37,9 +37,18 @@ public class FoodTruckApp {
 
 			System.out.printf("What type of food does %s sell?\n", name);
 			foodType = scanner.nextLine();
-			System.out.printf("How good is the %s from %s, on a scale of 1-10?\n", foodType, name);
-			rating = scanner.nextInt();
-			scanner.nextLine();
+			// makes sure the rating is in the correct range of 1-10
+			boolean oneToTen = false;
+			do {
+				System.out.printf("How good is the %s from %s, on a scale of 1-10?\n", foodType, name);
+				rating = scanner.nextInt();
+				scanner.nextLine();
+				if(rating > 0 && rating < 11) {
+					oneToTen = true;
+				} else {
+					System.out.println("Sorry, the rating must be between 1 and 10.");
+				}
+			} while (!oneToTen);
 			// instantiates the truck and increments the counter for the index
 			foodTrucks[trucksEntered] = fta.addFoodTruck(name, foodType, rating);
 			trucksEntered++;
