@@ -43,7 +43,7 @@ public class FoodTruckApp {
 				System.out.printf("How good is the %s from %s, on a scale of 1-10?\n", foodType, name);
 				rating = scanner.nextInt();
 				scanner.nextLine();
-				if(rating > 0 && rating < 11) {
+				if (rating > 0 && rating < 11) {
 					oneToTen = true;
 				} else {
 					System.out.println("Sorry, the rating must be between 1 and 10.");
@@ -62,18 +62,21 @@ public class FoodTruckApp {
 		}
 
 	}
+
 	// sends new truck to ctor and adds to array
 	public FoodTruck addFoodTruck(String name, String foodType, int rating) {
 		FoodTruck foodTruck = new FoodTruck(name, foodType, rating);
 		System.out.println("\nFood Truck Added: " + foodTruck.getName() + "\n");
 		return foodTruck;
 	}
+
 	// prints the menu
 	public void displayMenu() {
 		System.out.println(
 				"\nMain Menu\nPlease Make a Selection:\n1) View all Food Trucks\n2) See Average Food Truck Ratings\n3) See the Highest-Rated Food Truck\n4) Quit the Program");
 
 	}
+
 	// processes menu input
 	public boolean activateMenuOption(int menuChoice, FoodTruck[] foodTrucks) {
 		switch (menuChoice) {
@@ -91,8 +94,10 @@ public class FoodTruckApp {
 			return false;
 		default:
 			System.out.println("Invalid Selection.  Please Try Again.");
-		} return true;
+		}
+		return true;
 	}
+
 	// lists all FoodTrucks in array
 	public void listFoodTrucks(FoodTruck[] foodTrucks) {
 		for (FoodTruck foodTruck : foodTrucks) {
@@ -101,6 +106,7 @@ public class FoodTruckApp {
 			}
 		}
 	}
+
 	// calculates average of FoodTruck ratings
 	public void calculateFoodTruckAverage(FoodTruck[] foodTrucks) {
 		double average = 0.0;
@@ -115,6 +121,7 @@ public class FoodTruckApp {
 		System.out.printf("\nThe average rating of all food trucks in our database is %.2f out of 10.\n", average);
 
 	}
+
 	// determines highest-rated FoodTruck and displays all FT data
 	public void findHighestRating(FoodTruck[] foodTrucks) {
 		int highest = foodTrucks[0].getRating();
