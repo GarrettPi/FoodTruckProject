@@ -48,5 +48,7 @@ The user can select any of the four options and will receive the following outpu
 
 ### Lessons Learned
 
-Biggest lesson I think I learned with this project is that it ALWAYS pays to give your code that one last review.  For instance, I almost left a pair of auto generated get/set methods for the static truck number field.  Had I done that, I would have pretty royally tanked my chances at full credit.  Thankfully I caught them in time.  It's never too late to double check the plan and make sure your code doesn't deviate.
+Biggest lesson I learned with this project is that it ALWAYS pays to give your code that one last review.  For instance, I almost left a pair of auto generated static get/set methods for the static truck number field.  Had I done that, I would not have completed the assignment to a sufficient degree to earn full credit.  Thankfully I caught them in time.  It's never too late to double check the plan and make sure your code doesn't deviate.
+
+Another lesson I learned was the true importance of analysis and planning on relation to time management of object-oriented programming projects.  My time was heavily constrained this weekend and that could have impacted my ability to complete the assignment.  Thankfully I spent the requisite time to break down the needs of the program and then plan how best to achieve them.  This allowed me not only to complete the assignment in time, but also to add some quality of life upgrades that make the user experience more reliably enjoyable.
 
