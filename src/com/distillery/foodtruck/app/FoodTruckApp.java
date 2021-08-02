@@ -7,14 +7,17 @@ public class FoodTruckApp {
 	static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		
 		// instantiating an instance of this class to remove the need for static methods
 		FoodTruckApp fta = new FoodTruckApp();
+		
 		// creating the array to hold the food truck
 		FoodTruck[] foodTrucks = new FoodTruck[5];
 		int trucksEntered = 0; // used to determine whether to quit and as index for the FoodTruck[]
 		boolean keepGoing = true;
 		System.out.println(
 				"-----Welcome to the Food Truck Database!-----\nThe easiest way to store and rate your favorite mobile hot spots!\n\n");
+		
 		// Data entry loop
 		while (trucksEntered < 5) {
 			// variables for instantiating FoodTrucks
